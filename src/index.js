@@ -7,6 +7,7 @@ const overallNode = document.querySelector('.overall')
 const breakdownNode = document.querySelector('.breakdown')
 
 inputNode.addEventListener('paste', onInputChange)
+inputNode.addEventListener('change', onInputChange)
 
 function onInputChange() {
   setTimeout(() => {

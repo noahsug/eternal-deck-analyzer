@@ -11,7 +11,7 @@ function getRating(card) {
   if (rating === undefined) {
     console.error('Failed to find rating for', card)
   }
-  return rating || 'card rating not found ☹️'
+  return rating === undefined ? 'card rating not found ☹️' : rating
 }
 
 export default getRating
