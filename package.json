@@ -1,7 +1,7 @@
 {
-  "name": "eternal-deck-generator",
+  "name": "eternal-deck-analyzer",
   "version": "0.1.0",
-  "description": "Generate decks based on draft tier list",
+  "description": "Analyze decks based on draft tier list",
   "main": "src",
   "scripts": {
     "clean": "shx rm -rf dist",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:noahsug/eternal-deck-generator.git"
+    "url": "git@github.com:noahsug/eternal-deck-analyzer.git"
   },
   "keywords": [
     "eternal",
     "card",
     "game",
     "deck",
-    "generator",
+    "analyzer",
     "sealed",
     "draft",
     "limited"
@@ -26,9 +26,9 @@
   "author": "Noah Sugarman <noahsug@gmail.com.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/noahsug/eternal-deck-generator/issues"
+    "url": "https://github.com/noahsug/eternal-deck-analyzer/issues"
   },
-  "homepage": "https://github.com/noahsug/eternal-deck-generator#readme",
+  "homepage": "https://github.com/noahsug/eternal-deck-analyzer#readme",
   "gh-pages-deploy": {
     "staticpath": "dist"
   },
