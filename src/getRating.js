@@ -7,9 +7,11 @@ function getRating(card) {
   if (card.endsWith('Banner')) {
     return 2
   }
-  const rating = ratings[card]
+  let rating = ratings[card]
   if (rating === undefined) {
-    console.error('Failed to find rating for', card)
+    Object.keys(ratings).forEach(ratedCard => {
+      if (card.startsWith(ratedCard)) rating = ratings[ratedCard]
+    })
   }
   return rating === undefined ? 'card rating not found ☹️' : rating
 }
