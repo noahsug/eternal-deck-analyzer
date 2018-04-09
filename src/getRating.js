@@ -1,7 +1,7 @@
-import ratingInput from './rating-input.csv'
+import ratingsCsv from './ratings.csv'
 import parseRatings from './parseRatings'
 
-const ratings = parseRatings(ratingInput)
+const ratings = parseRatings(ratingsCsv)
 
 function getRating(card) {
   if (card.endsWith('Banner')) {
@@ -11,7 +11,7 @@ function getRating(card) {
   if (rating === undefined) {
     console.error('Failed to find rating for', card)
   }
-  return rating || 0
+  return rating || 'card rating not found ☹️'
 }
 
 export default getRating
