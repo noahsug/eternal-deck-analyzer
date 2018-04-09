@@ -6,9 +6,30 @@ body {
   display: flex;
 }
 
+.stats {
+  margin-bottom: 10px;
+}
+
+.stats > div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.stats .value {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
 .breakdown h3 {
   margin-top: 0px;
   margin-bottom: 2px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.breakdown .count {
+  color: #666;
+  font-size: 14px;
 }
 
 .breakdown ul {
