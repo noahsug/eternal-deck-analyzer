@@ -1,5 +1,18 @@
 const HEADING_ROW = 1
 
+const FACTIONS = [
+  'Argenport',
+  'Combrei',
+  'Elysian',
+  'Feln',
+  'Hooru',
+  'Praxis',
+  'Rakano',
+  'Skycrag',
+  'Stonescar',
+  'Xenan',
+]
+
 function parseRatings(input) {
   const ratings = {}
 
@@ -12,6 +25,12 @@ function parseRatings(input) {
       if (card) ratings[card] = rating
     }
   }
+
+  FACTIONS.forEach(faction => {
+    ratings[`${faction} Banner`] = ratings['All Banners']
+    ratings[`${faction} Stranger`] = ratings['All Influence Strangers']
+  })
+
   return ratings
 }
 

@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "shx rm -rf dist",
     "build": "npm run clean && NODE_ENV=production webpack -p --progress",
-    "start": "webpack-dev-server --content-base src",
+    "start": "npm run build && webpack-dev-server --content-base src",
     "deploy": "npm run build && gh-pages-deploy"
   },
   "repository": {
@@ -30,7 +30,8 @@
   },
   "homepage": "https://github.com/noahsug/eternal-deck-analyzer#readme",
   "gh-pages-deploy": {
-    "staticpath": "dist"
+    "staticpath": "dist",
+    "noprompt": true
   },
   "dependencies": {},
   "devDependencies": {
