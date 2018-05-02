@@ -3,10 +3,25 @@ import parseRatings from './parseRatings'
 
 const ratings = parseRatings(ratingsCsv)
 
+const factions = [
+  'Argenport',
+  'Combrei',
+  'Elysian',
+  'Feln',
+  'Hooru',
+  'Praxis',
+  'Rakano',
+  'Skycrag',
+  'Stonescar',
+  'Xenan'
+]
+
+factions.forEach(faction => {
+  ratings[`${faction} Banner`] = 2
+  ratings[`${faction} Stranger`] = 3
+})
+
 function getRating(card) {
-  if (card.endsWith('Banner')) {
-    return 2
-  }
   let rating = ratings[card]
   if (rating === undefined) {
     Object.keys(ratings).forEach(ratedCard => {
